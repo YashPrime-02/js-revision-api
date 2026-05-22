@@ -7,8 +7,19 @@ const {
     getSingleTopic
 } = require('../controllers/topics.controller');
 
+
+// ==========================================
+// GET ALL TOPICS
+// ==========================================
+
 router.get('/', getAllTopics);
 
+
+// ==========================================
+// GET SINGLE TOPIC
+// ==========================================
+
 router.get('/:topicId', getSingleTopic);
+
 
 module.exports = router;

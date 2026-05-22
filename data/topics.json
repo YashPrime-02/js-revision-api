@@ -1,19 +1,34 @@
 [
   {
     "id": "01_basics",
-    "title": "JavaScript Basics",
-    "difficulty": "Beginner"
+    "title": "JavaScript Fundamentals",
+    "description": "Variables, datatypes, conversions, comparisons, strings, numbers, dates, memory and Temporal API concepts.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "45 min",
+    "totalSections": 9,
+    "tags": [
+      "variables",
+      "datatypes",
+      "strings",
+      "math",
+      "dates",
+      "memory"
+    ]
   },
 
   {
-    "id": "02_arrays",
-    "title": "Arrays",
-    "difficulty": "Beginner"
-  },
-
-  {
-    "id": "03_objects",
-    "title": "Objects",
-    "difficulty": "Intermediate"
+    "id": "02_basics",
+    "title": "Arrays, Objects & JSON",
+    "description": "JavaScript arrays, object handling, object methods and JSON fundamentals.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "35 min",
+    "totalSections": 4,
+    "tags": [
+      "arrays",
+      "objects",
+      "json",
+      "methods",
+      "destructuring"
+    ]
   }
 ]
