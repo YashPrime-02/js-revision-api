@@ -1,0 +1,19 @@
+[
+  {
+    "id": "01_basics",
+    "title": "JavaScript Basics",
+    "difficulty": "Beginner"
+  },
+
+  {
+    "id": "02_arrays",
+    "title": "Arrays",
+    "difficulty": "Beginner"
+  },
+
+  {
+    "id": "03_objects",
+    "title": "Objects",
+    "difficulty": "Intermediate"
+  }
+]
