@@ -1,0 +1,22 @@
+{
+    "id": "03_control_flow",
+    "title": "Control Flow",
+    "description": "Conditional statements, logical operators and execution flow in JavaScript.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "30 min",
+    "totalSections": 1,
+    "tags": [
+        "if-else",
+        "switch",
+        "truthy-falsy",
+        "logic",
+        "operators"
+    ],
+    "sections": [
+        {
+            "title": "FUNCTIONS IN JAVASCRIPT",
+            "sourceFile": "01_functions.js",
+            "rawCode": "// ==========================================\n// 📘 FUNCTIONS IN JAVASCRIPT\n// ==========================================\n\n\n// ------------------------------------------\n// ✅ Simple Function\n// ------------------------------------------\n\nfunction sayMyName(){\n    console.log(\"H\");\n    console.log(\"I\");\n    console.log(\"T\");\n    console.log(\"E\");\n    console.log(\"S\");\n    console.log(\"H\");\n}\n\n// Function call\n// sayMyName()\n\n\n// ==========================================\n// 📘 Function with Parameters\n// ==========================================\n\n// number1 and number2 => parameters\n\nfunction addTwoNumbers(number1, number2){\n\n    // let result = number1 + number2\n    // return result\n\n    return number1 + number2\n}\n\n\n// 3 and 5 => arguments\n\nconst result = addTwoNumbers(3, 5)\n\n// console.log(\"Result: \", result);\n\n\n// ==========================================\n// 📘 Default Parameters\n// ==========================================\n\nfunction loginUserMessage(username = \"sam\"){\n\n    // If username not provided\n\n    if(!username){\n        console.log(\"Please enter a username\");\n        return\n    }\n\n    return `${username} just logged in`\n}\n\n\n// console.log(loginUserMessage(\"hitesh\"))\n\n\n// ==========================================\n// 📘 Rest Operator (...)\n// ==========================================\n\nfunction calculateCartPrice(val1, val2, ...num1){\n    return num1\n}\n\n\n// First two values go into val1 & val2\n// Remaining values stored in num1 array\n\n// console.log(calculateCartPrice(200, 400, 500, 2000))\n\n\n// ==========================================\n// 📘 Passing Object in Function\n// ==========================================\n\nconst user = {\n    username: \"hitesh\",\n    prices: 199\n}\n\nfunction handleObject(anyobject){\n\n    console.log(\n        `Username is ${anyobject.username} and price is ${anyobject.price}`\n    );\n}\n\n\n// handleObject(user)\n\nhandleObject({\n    username: \"sam\",\n    price: 399\n})\n\n\n// ==========================================\n// 📘 Passing Array in Function\n// ==========================================\n\nconst myNewArray = [200, 400, 100, 600]\n\nfunction returnSecondValue(getArray){\n\n    return getArray[1]\n}\n\n\n// console.log(returnSecondValue(myNewArray));\n\nconsole.log(returnSecondValue([200, 400, 500, 1000]));\n\n\n// Output:\n// 400"
+        }
+    ]
+}
