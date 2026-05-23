@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/YashPrime-02/js-revision-api#readme",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "^5.2.1"
   },
   "devDependencies": {
