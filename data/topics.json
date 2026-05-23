@@ -30,5 +30,21 @@
       "methods",
       "destructuring"
     ]
+  },
+
+  {
+    "id": "03_functions_and_scope",
+    "title": "Functions & Scope",
+    "description": "Functions, lexical scope, this keyword, arrow functions and IIFE concepts in JavaScript.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "30 min",
+    "totalSections": 4,
+    "tags": [
+      "functions",
+      "scope",
+      "this-keyword",
+      "arrow-functions",
+      "iife"
+    ]
   }
 ]
