@@ -1,8 +1,8 @@
 {
   "name": "js-revision-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "JavaScript Revision API",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
@@ -11,14 +11,22 @@
     "type": "git",
     "url": "git+https://github.com/YashPrime-02/js-revision-api.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "express",
+    "api",
+    "javascript"
+  ],
+  "author": "Yash Mishra",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/YashPrime-02/js-revision-api/issues"
   },
   "homepage": "https://github.com/YashPrime-02/js-revision-api#readme",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
