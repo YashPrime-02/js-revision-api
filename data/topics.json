@@ -33,7 +33,7 @@
   },
 
   {
-    "id": "03_functions_and_scope",
+    "id": "03_basics",
     "title": "Functions & Scope",
     "description": "Functions, lexical scope, this keyword, arrow functions and IIFE concepts in JavaScript.",
     "difficulty": "Beginner",
