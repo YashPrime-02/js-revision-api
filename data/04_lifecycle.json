@@ -1,0 +1,22 @@
+{
+    "id": "04_lifecycle",
+    "title": "Execution Context & Call Stack",
+    "description": "Understanding how JavaScript executes code, memory management, and call stack behavior.",
+    "difficulty": "Intermediate",
+    "estimatedReadTime": "25 min",
+    "totalSections": 1,
+    "tags": [
+        "execution-context",
+        "call-stack",
+        "hoisting",
+        "memory-phase",
+        "javascript-engine"
+    ],
+    "sections": [
+        {
+            "title": "JAVASCRIPT EXECUTION CONTEXT",
+            "sourceFile": "01_execution_context.js",
+            "rawCode": "// ==========================================\n// 📘 JAVASCRIPT EXECUTION CONTEXT\n// ==========================================\n\n// JavaScript runs code in 2 phases:\n// 1️⃣ Memory Creation Phase\n// 2️⃣ Execution Phase\n\n\n// ==========================================\n// 📘 Example Code\n// ==========================================\n\nlet val1 = 10\nlet val2 = 5\n\nfunction addNum(num1, num2){\n    let total = num1 + num2\n    return total\n}\n\nlet result1 = addNum(val1, val2)\nlet result2 = addNum(10, 2)\n\n\n// ==========================================\n// 📘 STEP 1 : Global Execution\n// ==========================================\n\n// Global execution context gets created\n// this keyword is also allocated\n\n\n// ==========================================\n// 📘 STEP 2 : Memory Creation Phase\n// ==========================================\n\n// val1 => undefined\n// val2 => undefined\n// addNum => function definition\n// result1 => undefined\n// result2 => undefined\n\n\n// ==========================================\n// 📘 STEP 3 : Execution Phase\n// ==========================================\n\n// val1 => 10\n// val2 => 5\n\n// First function call creates new execution context\n// num1 => 10, num2 => 5, total => 15\n// Returns 15 to result1\n\n// Second function call creates new execution context\n// num1 => 10, num2 => 2, total => 12\n// Returns 12 to result2\n\n\n// ==========================================\n// 📘 CALL STACK EXAMPLE\n// ==========================================\n\nfunction one(){\n    console.log(\"one\");\n    two()\n}\n\nfunction two(){\n    console.log(\"two\");\n    three()\n}\n\nfunction three(){\n    console.log(\"three\");\n}\n\none()\n\n\n// ==========================================\n// 📘 CALL STACK FLOW\n// ==========================================\n\n// one() enters stack\n// two() enters stack\n// three() enters stack\n\n// three() executes and leaves\n// two() executes and leaves\n// one() executes and leaves\n\n// Final Output:\n// one\ntwo\nthree"
+        }
+    ]
+}
