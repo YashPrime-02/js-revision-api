@@ -3,6 +3,18 @@ const fs = require('fs');
 
 
 // ==========================================
+// READ JSON FILE HELPER
+// ==========================================
+
+const readJsonFile = (filePath) => {
+
+    const data = fs.readFileSync(filePath, 'utf-8');
+
+    return JSON.parse(data);
+};
+
+
+// ==========================================
 // GET ALL TOPICS
 // ==========================================
 
@@ -15,9 +27,7 @@ const getAllTopics = (req, res) => {
             '../data/topics.json'
         );
 
-        const topics = JSON.parse(
-            fs.readFileSync(topicsPath, 'utf-8')
-        );
+        const topics = readJsonFile(topicsPath);
 
         res.status(200).json({
             success: true,
@@ -36,7 +46,6 @@ const getAllTopics = (req, res) => {
 };
 
 
-
 // ==========================================
 // GET SINGLE TOPIC
 // ==========================================
@@ -53,7 +62,7 @@ const getSingleTopic = (req, res) => {
         );
 
 
-        // CHECK FILE EXISTS
+        // FILE EXISTS CHECK
         if (!fs.existsSync(topicPath)) {
 
             return res.status(404).json({
@@ -63,11 +72,7 @@ const getSingleTopic = (req, res) => {
         }
 
 
-        // READ JSON FILE
-        const topicData = JSON.parse(
-            fs.readFileSync(topicPath, 'utf-8')
-        );
-
+        const topicData = readJsonFile(topicPath);
 
         res.status(200).json({
             success: true,
@@ -83,7 +88,6 @@ const getSingleTopic = (req, res) => {
         });
     }
 };
-
 
 
 // ==========================================
