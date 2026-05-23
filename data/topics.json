@@ -33,7 +33,7 @@
   },
 
   {
-    "id": "03_basics",
+    "id": "03_functions_and_scope",
     "title": "Functions & Scope",
     "description": "Functions, lexical scope, this keyword, arrow functions and IIFE concepts in JavaScript.",
     "difficulty": "Beginner",
@@ -45,6 +45,22 @@
       "this-keyword",
       "arrow-functions",
       "iife"
+    ]
+  },
+
+  {
+    "id": "04_lifecycle",
+    "title": "Execution Context & Call Stack",
+    "description": "Understanding how JavaScript executes code, memory management, and call stack behavior.",
+    "difficulty": "Intermediate",
+    "estimatedReadTime": "25 min",
+    "totalSections": 1,
+    "tags": [
+      "execution-context",
+      "call-stack",
+      "hoisting",
+      "memory-phase",
+      "javascript-engine"
     ]
   }
 ]
