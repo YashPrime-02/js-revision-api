@@ -62,5 +62,22 @@
       "memory-phase",
       "javascript-engine"
     ]
+  },
+
+
+   {
+    "id": "05_control_flow",
+    "title": "Control Flow - If Else & Switch",
+    "description": "Master conditional statements, logical operators, and switch cases in JavaScript.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "20 min",
+    "totalSections": 1,
+    "tags": [
+      "if-else",
+      "switch",
+      "comparison",
+      "logical-operators",
+      "conditions"
+    ]
   }
 ]
