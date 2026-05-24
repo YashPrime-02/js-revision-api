@@ -1,0 +1,22 @@
+{
+  "id": "05_control_flow",
+  "title": "Control Flow - If Else & Switch",
+  "description": "Master conditional statements, logical operators, and switch cases in JavaScript.",
+  "difficulty": "Beginner",
+  "estimatedReadTime": "20 min",
+  "totalSections": 1,
+  "tags": [
+    "if-else",
+    "switch",
+    "comparison",
+    "logical-operators",
+    "conditions"
+  ],
+  "sections": [
+    {
+      "title": "IF ELSE & SWITCH CASE",
+      "sourceFile": "01_if_else_switch.js",
+      "rawCode": "// ==========================================\n// 📘 IF ELSE & CONDITIONS\n// ==========================================\n\nconst isUserloggedIn = true\nconst temperature = 41\n\n\n// ==========================================\n// 📘 Basic if Condition\n// ==========================================\n\n// if (temperature === 40) {\n//     console.log(\"less than 50\");\n// } else {\n//     console.log(\"temperature is greater than 50\");\n// }\n\n\n// ==========================================\n// 📘 Comparison Operators\n// ==========================================\n\n// <   less than\n// >   greater than\n// <=  less than equal to\n// >=  greater than equal to\n\n// ==  checks value only\n// === checks value + datatype\n\n// !=  not equal\n// !== strict not equal\n\n\n// ==========================================\n// 📘 Block Scope Example\n// ==========================================\n\nconst score = 200\n\n// if (score > 100) {\n//     let power = \"fly\"\n//     console.log(`User power: ${power}`);\n// }\n\n// console.log(`User power: ${power}`); // ReferenceError\n\n\n// ==========================================\n// 📘 else if Ladder\n// ==========================================\n\nconst balance = 1000\n\n// if (balance < 500) {\n//     console.log(\"less than 500\");\n// } else if (balance < 750) {\n//     console.log(\"less than 750\");\n// } else if (balance < 900) {\n//     console.log(\"less than 900\");\n// } else {\n//     console.log(\"less than 1200\");\n// }\n\n\n// ==========================================\n// 📘 Logical Operators\n// ==========================================\n\nconst userLoggedIn = true\nconst debitCard = true\nconst loggedInFromGoogle = false\nconst loggedInFromEmail = true\n\nif (userLoggedIn && debitCard && 2 == 3) {\n    console.log(\"Allow to buy course\");\n}\n\nif (loggedInFromGoogle || loggedInFromEmail) {\n    console.log(\"User logged in\");\n}\n\n\n// ==========================================\n// 📘 Switch Case\n// ==========================================\n\nconst month = \"march\"\n\nswitch (month) {\n    case \"jan\":\n        console.log(\"January\");\n        break;\n    case \"feb\":\n        console.log(\"February\");\n        break;\n    case \"march\":\n        console.log(\"March\");\n        break;\n    case \"april\":\n        console.log(\"April\");\n        break;\n    default:\n        console.log(\"default case match\");\n        break;\n}"
+    }
+  ]
+}
