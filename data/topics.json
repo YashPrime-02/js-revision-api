@@ -82,19 +82,18 @@
 
   {
     "id": "06_iterations",
-    "title": "Loops & Iterations",
-    "description": "Learn for loops, while loops, do while loops, nested loops, break and continue statements in JavaScript.",
+    "title": "Iterations & Loops",
+    "description": "Master all types of loops in JavaScript - for, while, for...of, for...in, forEach and more.",
     "difficulty": "Beginner",
-    "estimatedReadTime": "25 min",
-    "totalSections": 2,
+    "estimatedReadTime": "30 min",
+    "totalSections": 3,
     "tags": [
+      "loops",
       "for-loop",
       "while-loop",
-      "do-while",
-      "nested-loops",
-      "break",
-      "continue",
-      "iterations"
+      "for-of",
+      "for-in",
+      "forEach"
     ]
   }
 ]
