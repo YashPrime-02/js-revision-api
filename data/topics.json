@@ -64,8 +64,7 @@
     ]
   },
 
-
-   {
+  {
     "id": "05_control_flow",
     "title": "Control Flow - If Else & Switch",
     "description": "Master conditional statements, logical operators, and switch cases in JavaScript.",
@@ -78,6 +77,24 @@
       "comparison",
       "logical-operators",
       "conditions"
+    ]
+  },
+
+  {
+    "id": "06_iterations",
+    "title": "Loops & Iterations",
+    "description": "Learn for loops, while loops, do while loops, nested loops, break and continue statements in JavaScript.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "25 min",
+    "totalSections": 2,
+    "tags": [
+      "for-loop",
+      "while-loop",
+      "do-while",
+      "nested-loops",
+      "break",
+      "continue",
+      "iterations"
     ]
   }
 ]

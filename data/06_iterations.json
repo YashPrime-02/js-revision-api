@@ -1,0 +1,27 @@
+{
+    "id": "06_iterations",
+    "title": "Iterations & Loops",
+    "description": "Master for loops, while loops, do-while, break, continue and nested loops in JavaScript.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "25 min",
+    "totalSections": 2,
+    "tags": [
+        "loops",
+        "for-loop",
+        "while-loop",
+        "break",
+        "continue"
+    ],
+    "sections": [
+        {
+            "title": "FOR LOOP & CONTROL STATEMENTS",
+            "sourceFile": "01_for_loop.js",
+            "rawCode": "// ==========================================\n// 📘 FOR LOOP IN JAVASCRIPT\n// ==========================================\n\nfor (let i = 0; i <= 10; i++) {\n    const element = i\n    if (element == 5) {\n        // console.log(\"5 is best number\");\n    }\n    // console.log(element);\n}\n\n\n// ==========================================\n// 📘 Nested Loop\n// ==========================================\n\nfor (let i = 1; i <= 10; i++) {\n    // console.log(`Outer loop value: ${i}`);\n\n    for (let j = 1; j <= 10; j++) {\n        // console.log(i + '*' + j + ' = ' + i*j);\n    }\n}\n\n\n// ==========================================\n// 📘 Loop on Array\n// ==========================================\n\nlet myArray2 = [\"flash\", \"batman\", \"superman\"]\n\nfor (let index = 0; index < myArray2.length; index++) {\n    const element = myArray2[index]\n    // console.log(element);\n}\n\n\n// ==========================================\n// 📘 break & continue\n// ==========================================\n\nfor (let index = 1; index <= 20; index++) {\n    if (index == 5) {\n        console.log(`Detected 5`);\n        continue\n    }\n    console.log(`Value of i is ${index}`);\n}"
+        },
+        {
+            "title": "WHILE & DO-WHILE LOOPS",
+            "sourceFile": "02_while_dowhile.js",
+            "rawCode": "// ==========================================\n// 📘 WHILE LOOP\n// ==========================================\n\nlet index = 0\n\n// while (index <= 10) {\n//     console.log(`Value of index is ${index}`);\n//     index = index + 2\n// }\n\n\n// ==========================================\n// 📘 while Loop with Array\n// ==========================================\n\nlet myArray3 = ['flash', \"batman\", \"superman\"]\nlet arr = 0\n\nwhile (arr < myArray3.length) {\n    // console.log(`Value is ${myArray3[arr]}`);\n    arr = arr + 1\n}\n\n\n// ==========================================\n// 📘 DO-WHILE LOOP\n// ==========================================\n\nlet score = 11\n\ndo {\n    console.log(`Score is ${score}`);\n    score++\n} while (score <= 10);\n\n// Output: Score is 11\n// (Runs at least once even if condition is false)"
+        }
+    ]
+}
