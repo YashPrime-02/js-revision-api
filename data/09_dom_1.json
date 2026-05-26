@@ -1,0 +1,22 @@
+{
+    "id": "09_dom_1",
+    "title": "DOM Manipulation - Part 1",
+    "description": "Understanding Document Object Model, selectors, and basic DOM manipulation in JavaScript.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "25 min",
+    "totalSections": 1,
+    "tags": [
+        "dom",
+        "selectors",
+        "getelementbyid",
+        "queryselector",
+        "innerhtml"
+    ],
+    "sections": [
+        {
+            "title": "DOM SELECTORS & MANIPULATION",
+            "sourceFile": "01_dom_selectors.js",
+            "rawCode": "// ==========================================\n// 📘 DOM Selectors\n// ==========================================\n\n// Select element by id\ndocument.getElementById('title')\n\n// Select element by class\ndocument.getElementsByClassName('list-item')\n\n// Select first matching element\ndocument.querySelector('h2')\n\n// Select all matching elements\ndocument.querySelectorAll('h2')\n\n\n// ==========================================\n// 📘 Changing Content\n// ==========================================\n\nconst title = document.getElementById('title')\n\n// Change text\ntitle.innerText = \"Hello DOM\"\n\n// Get visible text only\nconsole.log(title.innerText)\n\n// Get complete text including hidden\nconsole.log(title.textContent)\n\n// Get HTML content\nconsole.log(title.innerHTML)\n\n\n// ==========================================\n// 📘 Styling with JS\n// ==========================================\n\ntitle.style.color = \"yellow\"\ntitle.style.backgroundColor = \"black\"\ntitle.style.padding = \"15px\"\ntitle.style.borderRadius = \"10px\"\n\n\n// ==========================================\n// 📘 querySelector Examples\n// ==========================================\n\ndocument.querySelector('input')\ndocument.querySelector('input[type=\"password\"]')\ndocument.querySelector('li')\n\n\n// ==========================================\n// 📘 querySelectorAll + Loop\n// ==========================================\n\nconst tempLiList = document.querySelectorAll('li')\n\n// Access using index\ntempLiList[0].style.color = \"green\"\n\n// Loop on NodeList\ntempLiList.forEach((item) => {\n    item.style.backgroundColor = \"grey\"\n})"
+        }
+    ]
+}

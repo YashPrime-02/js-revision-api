@@ -126,5 +126,21 @@
       "accumulator",
       "shopping-cart"
     ]
+  },
+
+  {
+    "id": "09_dom_1",
+    "title": "DOM Manipulation - Part 1",
+    "description": "Understanding Document Object Model, selectors, and basic DOM manipulation in JavaScript.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "25 min",
+    "totalSections": 1,
+    "tags": [
+      "dom",
+      "selectors",
+      "getelementbyid",
+      "queryselector",
+      "innerhtml"
+    ]
   }
 ]
