@@ -1,0 +1,27 @@
+{
+  "id": "07_iterations_2",
+  "title": "Array Methods - filter, map & Chaining",
+  "description": "Deep dive into filter(), map(), method chaining and functional array operations in JavaScript.",
+  "difficulty": "Beginner",
+  "estimatedReadTime": "25 min",
+  "totalSections": 2,
+  "tags": [
+    "filter",
+    "map",
+    "chaining",
+    "array-methods",
+    "functional-programming"
+  ],
+  "sections": [
+    {
+      "title": "FILTER METHOD",
+      "sourceFile": "01_filter.js",
+      "rawCode": "// ==========================================\n// 📘 filter() IN JAVASCRIPT\n// ==========================================\n\n// filter() returns a new array based on condition\n\nconst myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\n// const newNums = myNums.filter( (num) => num > 4 )\n// console.log(newNums);\n\n\n// Using forEach to achieve same result\nconst newNums2 = []\n\nmyNums.forEach( (num) => {\n    if (num > 4) {\n        newNums2.push(num)\n    }\n})\n\n// console.log(newNums2);\n\n\n// ==========================================\n// 📘 Filter on Array of Objects\n// ==========================================\n\nconst books = [\n    { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },\n    { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },\n    { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },\n    { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010 },\n    { title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014 }\n]\n\nlet userBooks = books.filter( (bk) => bk.genre === 'History')\n\nuserBooks = books.filter( (bk) => {\n    return bk.publish >= 1995 && bk.genre === \"History\"\n})\n\nconsole.log(userBooks);"
+    },
+    {
+      "title": "MAP & METHOD CHAINING",
+      "sourceFile": "02_map_chaining.js",
+      "rawCode": "// ==========================================\n// 📘 map() & Chaining\n// ==========================================\n\nconst myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\n// Simple map\n// const newNums = myNumers.map( (num) => num + 10 )\n\n\n// Method Chaining\nconst newNums = myNumers\n                .map((num) => num * 10 )\n                .map( (num) => num + 1)\n                .filter( (num) => num >= 40)\n\nconsole.log(newNums);\n\n\n// Step-by-step:\n// 1. Multiply by 10 → [10,20,30,40,50,60,70,80,90,100]\n// 2. Add 1 → [11,21,31,41,51,61,71,81,91,101]\n// 3. Filter >= 40 → [41,51,61,71,81,91,101]"
+    }
+  ]
+}

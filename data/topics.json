@@ -95,5 +95,21 @@
       "for-in",
       "forEach"
     ]
+  },
+
+  {
+    "id": "07_iterations_2",
+    "title": "Array Methods - filter, map & Chaining",
+    "description": "Deep dive into filter(), map(), method chaining and functional array operations in JavaScript.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "25 min",
+    "totalSections": 2,
+    "tags": [
+      "filter",
+      "map",
+      "chaining",
+      "array-methods",
+      "functional-programming"
+    ]
   }
 ]
