@@ -1,0 +1,21 @@
+{
+  "id": "08_iterations_3",
+  "title": "Array Methods - reduce()",
+  "description": "Understanding reduce() method for accumulating values and real-world use cases like shopping cart.",
+  "difficulty": "Intermediate",
+  "estimatedReadTime": "20 min",
+  "totalSections": 1,
+  "tags": [
+    "reduce",
+    "array-methods",
+    "accumulator",
+    "shopping-cart"
+  ],
+  "sections": [
+    {
+      "title": "REDUCE METHOD IN JAVASCRIPT",
+      "sourceFile": "01_reduce.js",
+      "rawCode": "// ==========================================\n// 📘 reduce() IN JAVASCRIPT\n// ==========================================\n\n// reduce() is used to reduce an array into a single value\n\nconst myNums = [1, 2, 3]\n\n\n// ==========================================\n// 📘 Arrow Function Syntax\n// ==========================================\n\nconst myTotal = myNums.reduce( (acc, curr) => acc + curr, 0)\n\nconsole.log(myTotal);\n// Output: 6\n\n\n// ==========================================\n// 📘 Real Example : Shopping Cart\n// ==========================================\n\nconst shoppingCart = [\n    {\n        itemName: \"js course\",\n        price: 2999\n    },\n    {\n        itemName: \"py course\",\n        price: 999\n    },\n    {\n        itemName: \"mobile dev course\",\n        price: 5999\n    },\n    {\n        itemName: \"data science course\",\n        price: 12999\n    }\n]\n\n// Add all course prices\nconst priceToPay = shoppingCart.reduce( (acc, item) => acc + item.price, 0)\n\nconsole.log(priceToPay);\n\n// Final Output: 22996"
+    }
+  ]
+}

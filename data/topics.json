@@ -111,5 +111,20 @@
       "array-methods",
       "functional-programming"
     ]
+  },
+
+  {
+    "id": "08_iterations_3",
+    "title": "Array Methods - reduce()",
+    "description": "Understanding reduce() method for accumulating values and real-world use cases like shopping cart.",
+    "difficulty": "Intermediate",
+    "estimatedReadTime": "20 min",
+    "totalSections": 1,
+    "tags": [
+      "reduce",
+      "array-methods",
+      "accumulator",
+      "shopping-cart"
+    ]
   }
 ]
