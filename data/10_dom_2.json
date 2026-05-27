@@ -1,0 +1,22 @@
+{
+  "id": "10_dom_2",
+  "title": "DOM Manipulation - Part 2",
+  "description": "Parent-Child Traversal, Siblings, childNodes, and Deep DOM Navigation.",
+  "difficulty": "Beginner",
+  "estimatedReadTime": "25 min",
+  "totalSections": 1,
+  "tags": [
+    "dom",
+    "parent-child",
+    "traversal",
+    "childnodes",
+    "siblings"
+  ],
+  "sections": [
+    {
+      "title": "PARENT-CHILD TRAVERSAL & NODE PROPERTIES",
+      "sourceFile": "02_dom_traversal.js",
+      "rawCode": "// ==========================================\n// 📘 Select Parent Element\n// ==========================================\n\nconst parent = document.querySelector('.parent')\n\n// console.log(parent);\n\n\n// ==========================================\n// 📘 children Property\n// ==========================================\n\n// Gives HTMLCollection of direct child elements\n// console.log(parent.children);\n\n// Access specific child\n// console.log(parent.children[1].innerHTML); // Tuesday\n\n\n// ==========================================\n// 📘 Loop through Children\n// ==========================================\n\n// for (let i = 0; i < parent.children.length; i++) {\n//     console.log(parent.children[i].innerHTML);\n// }\n\n\n// ==========================================\n// 📘 Styling Child\n// ==========================================\n\nparent.children[1].style.color = \"orange\"\n\n\n// ==========================================\n// 📘 firstElementChild & lastElementChild\n// ==========================================\n\n// console.log(parent.firstElementChild);\n// console.log(parent.lastElementChild);\n\n\n// ==========================================\n// 📘 Child to Parent Traversal\n// ==========================================\n\nconst dayOne = document.querySelector('.day')\n\n// console.log(dayOne.parentElement);\n\n\n// ==========================================\n// 📘 Siblings\n// ==========================================\n\n// console.log(dayOne.nextElementSibling);\n\n\n// ==========================================\n// 📘 childNodes (Most Important)\n// ==========================================\n\nconsole.log(\"NODES: \", parent.childNodes);\n\n// childNodes includes:\n// - Element nodes\n// - Text nodes (whitespace)\n// - Comment nodes"
+    }
+  ]
+}

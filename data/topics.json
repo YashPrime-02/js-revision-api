@@ -142,5 +142,37 @@
       "queryselector",
       "innerhtml"
     ]
+  },
+
+  {
+    "id": "10_dom_2",
+    "title": "DOM Manipulation - Part 2",
+    "description": "Parent-Child Traversal, Siblings, childNodes, and Deep DOM Navigation.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "25 min",
+    "totalSections": 1,
+    "tags": [
+      "dom",
+      "parent-child",
+      "traversal",
+      "childnodes",
+      "siblings"
+    ]
+  },
+
+  {
+    "id": "11_dom_3",
+    "title": "DOM Manipulation - Part 3",
+    "description": "Creating Elements, Adding Attributes, Text Nodes, and Appending to DOM.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "20 min",
+    "totalSections": 1,
+    "tags": [
+      "dom",
+      "createelement",
+      "appendchild",
+      "setattribute",
+      "textnode"
+    ]
   }
 ]

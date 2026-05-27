@@ -1,0 +1,22 @@
+{
+  "id": "11_dom_3",
+  "title": "DOM Manipulation - Part 3",
+  "description": "Creating Elements, Adding Attributes, Text Nodes, and Appending to DOM.",
+  "difficulty": "Beginner",
+  "estimatedReadTime": "20 min",
+  "totalSections": 1,
+  "tags": [
+    "dom",
+    "createelement",
+    "appendchild",
+    "setattribute",
+    "textnode"
+  ],
+  "sections": [
+    {
+      "title": "CREATE ELEMENT & APPEND TO DOM",
+      "sourceFile": "03_dom_create.js",
+      "rawCode": "// ==========================================\n// 📘 Create Element\n// ==========================================\n\nconst div = document.createElement('div')\n\nconsole.log(div);\n// Output: <div></div>\n\n\n// ==========================================\n// 📘 Add Class & ID\n// ==========================================\n\ndiv.className = \"main\"\ndiv.id = Math.round(Math.random() * 10 + 1)\n\n\n// ==========================================\n// 📘 setAttribute()\n// ==========================================\n\ndiv.setAttribute(\"title\", \"generated title\")\n\n\n// ==========================================\n// 📘 Add Styling\n// ==========================================\n\ndiv.style.backgroundColor = \"green\"\ndiv.style.padding = \"12px\"\n\n\n// ==========================================\n// 📘 Add Text (Best Way)\n// ==========================================\n\nconst addText = document.createTextNode(\"Chai aur code\")\n\ndiv.appendChild(addText)\n\n\n// ==========================================\n// 📘 Append to Body\n// ==========================================\n\ndocument.body.appendChild(div)"
+    }
+  ]
+}
