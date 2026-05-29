@@ -174,5 +174,23 @@
       "setattribute",
       "textnode"
     ]
-  }
+  },
+
+
+  {
+  "id": "12_dom_4",
+  "title": "DOM Manipulation - Part 4",
+  "description": "Adding, Editing, Replacing, and Removing Elements dynamically in the DOM.",
+  "difficulty": "Beginner",
+  "estimatedReadTime": "20 min",
+  "totalSections": 1,
+  "tags": [
+    "dom",
+    "appendchild",
+    "replacewith",
+    "outerhtml",
+    "remove"
+  ]
+ 
+}
 ]

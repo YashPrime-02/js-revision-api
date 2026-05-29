@@ -1,0 +1,22 @@
+{
+  "id": "12_dom_4",
+  "title": "DOM Manipulation - Part 4",
+  "description": "Adding, Editing, Replacing, and Removing Elements dynamically in the DOM.",
+  "difficulty": "Beginner",
+  "estimatedReadTime": "20 min",
+  "totalSections": 1,
+  "tags": [
+    "dom",
+    "appendchild",
+    "replacewith",
+    "outerhtml",
+    "remove"
+  ],
+  "sections": [
+    {
+      "title": "ADD, EDIT, REPLACE & REMOVE ELEMENTS",
+      "sourceFile": "04_dom_edit_remove.js",
+      "rawCode": "// ==========================================\n// 📘 Create & Add Element\n// ==========================================\n\nfunction addLanguage(langName){\n    const li = document.createElement('li');\n    li.innerHTML = `${langName}`\n    document.querySelector('.language').appendChild(li)\n}\n\naddLanguage(\"python\")\naddLanguage(\"typescript\")\n\n\n// ==========================================\n// 📘 Optimized Approach (Better)\n// ==========================================\n\nfunction addOptiLanguage(langName){\n    const li = document.createElement('li');\n    li.appendChild(document.createTextNode(langName))\n    document.querySelector('.language').appendChild(li)\n}\n\naddOptiLanguage('golang')\n\n\n// ==========================================\n// 📘 Edit / Replace Element\n// ==========================================\n\nconst secondLang = document.querySelector(\"li:nth-child(2)\")\n\n// Replace element\nconst newli = document.createElement('li')\nnewli.textContent = \"Mojo\"\nsecondLang.replaceWith(newli)\n\n\n// ==========================================\n// 📘 Edit using outerHTML\n// ==========================================\n\nconst firstLang = document.querySelector(\"li:first-child\")\nfirstLang.outerHTML = '<li>TypeScript</li>'\n\n\n// ==========================================\n// 📘 Remove Element\n// ==========================================\n\nconst lastLang = document.querySelector('li:last-child')\nlastLang.remove()"
+    }
+  ]
+}
