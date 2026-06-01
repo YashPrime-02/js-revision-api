@@ -176,21 +176,50 @@
     ]
   },
 
+  {
+    "id": "12_dom_4",
+    "title": "DOM Manipulation - Part 4",
+    "description": "Adding, Editing, Replacing, and Removing Elements dynamically in the DOM.",
+    "difficulty": "Beginner",
+    "estimatedReadTime": "20 min",
+    "totalSections": 1,
+    "tags": [
+      "dom",
+      "appendchild",
+      "replacewith",
+      "outerhtml",
+      "remove"
+    ]
+  },
 
   {
-  "id": "12_dom_4",
-  "title": "DOM Manipulation - Part 4",
-  "description": "Adding, Editing, Replacing, and Removing Elements dynamically in the DOM.",
-  "difficulty": "Beginner",
-  "estimatedReadTime": "20 min",
-  "totalSections": 1,
-  "tags": [
-    "dom",
-    "appendchild",
-    "replacewith",
-    "outerhtml",
-    "remove"
-  ]
- 
-}
+    "id": "13_events_1",
+    "title": "Events in JavaScript - Part 1",
+    "description": "Understanding addEventListener, Event Bubbling, preventDefault, and Event Delegation.",
+    "difficulty": "Intermediate",
+    "estimatedReadTime": "25 min",
+    "totalSections": 1,
+    "tags": [
+      "events",
+      "addeventlistener",
+      "event-bubbling",
+      "preventdefault",
+      "event-delegation"
+    ]
+  },
+
+  {
+    "id": "14_events_2",
+    "title": "Events & Timing in JavaScript - Part 2",
+    "description": "Working with setTimeout, clearTimeout, and asynchronous execution.",
+    "difficulty": "Intermediate",
+    "estimatedReadTime": "15 min",
+    "totalSections": 1,
+    "tags": [
+      "settimeout",
+      "cleartimeout",
+      "asynchronous",
+      "timing"
+    ]
+  }
 ]
