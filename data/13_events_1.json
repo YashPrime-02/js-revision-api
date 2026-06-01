@@ -1,0 +1,22 @@
+{
+  "id": "13_events_1",
+  "title": "Events in JavaScript - Part 1",
+  "description": "Understanding addEventListener, Event Bubbling, preventDefault, and Event Delegation.",
+  "difficulty": "Intermediate",
+  "estimatedReadTime": "25 min",
+  "totalSections": 1,
+  "tags": [
+    "events",
+    "addeventlistener",
+    "event-bubbling",
+    "preventdefault",
+    "event-delegation"
+  ],
+  "sections": [
+    {
+      "title": "EVENT LISTENERS & DELEGATION",
+      "sourceFile": "01_events.js",
+      "rawCode": "// ==========================================\n// 📘 addEventListener (Modern Way)\n// ==========================================\n\n// Syntax: element.addEventListener('event', callback, useCapture)\n\n\n// ==========================================\n// 📘 Event Important Properties\n// ==========================================\n\n// e.type\n// e.timestamp\n// e.target\n// e.currentTarget\n// e.clientX, e.clientY\n// e.altKey, e.ctrlKey, e.shiftKey\n\n\n// ==========================================\n// 📘 Event Bubbling & stopPropagation\n// ==========================================\n\ndocument.getElementById('images').addEventListener('click', function(e){\n    console.log(\"clicked inside the ul\");\n}, false)\n\ndocument.getElementById('owl').addEventListener('click', function(e){\n    console.log(\"owl clicked\");\n    e.stopPropagation()   // Stops bubbling\n}, false)\n\n\n// ==========================================\n// 📘 preventDefault()\n// ==========================================\n\ndocument.getElementById('google').addEventListener('click', function(e){\n    e.preventDefault();   // Prevents default action (link navigation)\n    console.log(\"google clicked\");\n}, false)\n\n\n// ==========================================\n// 📘 Event Delegation (Most Important)\n// ==========================================\n\ndocument.querySelector('#images').addEventListener('click', function(e){\n\n    console.log(e.target.tagName);\n\n    if (e.target.tagName === 'IMG') {\n        console.log(e.target.id);\n        let removeIt = e.target.parentNode;\n        removeIt.remove();\n    }\n\n})"
+    }
+  ]
+}

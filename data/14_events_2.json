@@ -1,0 +1,21 @@
+{
+  "id": "14_events_2",
+  "title": "Events & Timing in JavaScript - Part 2",
+  "description": "Working with setTimeout, clearTimeout, and asynchronous execution.",
+  "difficulty": "Intermediate",
+  "estimatedReadTime": "15 min",
+  "totalSections": 1,
+  "tags": [
+    "settimeout",
+    "cleartimeout",
+    "asynchronous",
+    "timing"
+  ],
+  "sections": [
+    {
+      "title": "SETTIMEOUT & CLEARTIMEOUT",
+      "sourceFile": "02_set_timeout.js",
+      "rawCode": "// ==========================================\n// 📘 setTimeout()\n// ==========================================\n\n// Executes function once after given delay\n\n// Syntax: setTimeout(function, delay)\n\nconst changeText = function(){\n    document.querySelector('h1').innerHTML = \"best JS series\"\n}\n\n// Run after 2 seconds\nconst changeMe = setTimeout(changeText, 2000)\n\n\n// ==========================================\n// 📘 clearTimeout()\n// ==========================================\n\ndocument.querySelector('#stop')\n.addEventListener('click', function(){\n    clearTimeout(changeMe)\n    console.log(\"STOPPED\")\n})\n\n// If stop button is clicked before 2 seconds,\n// the text change will be cancelled"
+    }
+  ]
+}
