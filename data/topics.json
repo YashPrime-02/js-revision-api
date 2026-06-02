@@ -221,5 +221,22 @@
       "asynchronous",
       "timing"
     ]
-  }
+  },
+
+  {
+  "id": "15_api_request",
+  "title": "API Requests with XMLHttpRequest",
+  "description": "Understanding XMLHttpRequest, ready states, and making GET requests to APIs.",
+  "difficulty": "Intermediate",
+  "estimatedReadTime": "25 min",
+  "totalSections": 1,
+  "tags": [
+    "api",
+    "xmlhttprequest",
+    "fetch",
+    "ready-state",
+    "http-request"
+  ]
+  
+}
 ]
