@@ -230,7 +230,7 @@ app.get("/", (req, res) => {
         <div class="container">
 
             <span class="badge">
-                Version 1.0.0
+                Version 1.5.1
             </span>
 
             <!-- ==========================================
