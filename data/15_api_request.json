@@ -1,0 +1,22 @@
+{
+  "id": "15_api_request",
+  "title": "API Requests with XMLHttpRequest",
+  "description": "Understanding XMLHttpRequest, ready states, and making GET requests to APIs.",
+  "difficulty": "Intermediate",
+  "estimatedReadTime": "25 min",
+  "totalSections": 1,
+  "tags": [
+    "api",
+    "xmlhttprequest",
+    "fetch",
+    "ready-state",
+    "http-request"
+  ],
+  "sections": [
+    {
+      "title": "XMLHttpRequest & GitHub API",
+      "sourceFile": "01_xmlhttp.js",
+      "rawCode": "// ==========================================\n// 📘 GitHub API URL\n// ==========================================\n\nconst requestUrl = 'https://api.github.com/users/hiteshchoudhary'\n\n\n// ==========================================\n// 📘 Create XMLHttpRequest Object\n// ==========================================\n\nconst xhr = new XMLHttpRequest()\n\n\n// ==========================================\n// 📘 Open Connection\n// ==========================================\n\nxhr.open('GET', requestUrl)\n\n\n// ==========================================\n// 📘 onreadystatechange Handler\n// ==========================================\n\nxhr.onreadystatechange = function(){\n\n    console.log(\"Ready State:\", xhr.readyState)\n\n    if (xhr.readyState === 4) {\n\n        const data = JSON.parse(this.responseText)\n\n        console.log(\"Full Data:\", data)\n        console.log(\"Data Type:\", typeof data)\n        console.log(\"Followers:\", data.followers)\n    }\n}\n\n\n// ==========================================\n// 📘 Send Request\n// ==========================================\n\nxhr.send()\n\n\n// ==========================================\n// 📘 Ready States Reference\n// ==========================================\n\n/*\n0 => UNSENT\n1 => OPENED\n2 => HEADERS_RECEIVED\n3 => LOADING\n4 => DONE\n*/"
+    }
+  ]
+}
