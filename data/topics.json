@@ -238,5 +238,23 @@
     "http-request"
   ]
   
+},
+
+
+{
+  "id": "16_promises",
+  "title": "Promises & Async/Await",
+  "description": "Master Promises, chaining, error handling, async/await and modern asynchronous JavaScript.",
+  "difficulty": "Intermediate",
+  "estimatedReadTime": "30 min",
+  "totalSections": 3,
+  "tags": [
+    "promises",
+    "async-await",
+    "fetch-api",
+    "error-handling",
+    "asynchronous"
+  ]
+
 }
 ]
