@@ -315,7 +315,7 @@ app.get("/", (req, res) => {
        <script>
 
     // ==========================================
-    // 📘 Select Status Elements
+    // 📘 Select Elements
     // ==========================================
 
     const statusDot =
@@ -326,76 +326,91 @@ app.get("/", (req, res) => {
 
 
     // ==========================================
-    // 📘 Check API Health
+    // 📘 API Health Checker
     // ==========================================
 
-    fetch('/api/topics')
+    async function checkApiStatus(){
 
-    .then((response) => {
+        try{
 
-        // ==========================================
-        // 📘 API ONLINE
-        // ==========================================
+            // Small delay for visual effect
 
-        if(response.ok){
+            setTimeout(async () => {
 
-            statusDot.style.background =
-            '#22c55e'
+                const response = await fetch(
+                    window.location.origin + '/api/topics'
+                )
 
-            statusDot.style.boxShadow =
-            '0 0 5px #22c55e, 0 0 15px #22c55e'
 
-            statusText.innerText =
-            'API STATUS : ONLINE'
+                // ==========================================
+                // 📘 API ONLINE
+                // ==========================================
 
-            statusText.style.color =
-            '#22c55e'
+                if(response.ok){
+
+                    statusDot.style.background =
+                    '#22c55e'
+
+                    statusDot.style.boxShadow =
+                    '0 0 5px #22c55e, 0 0 20px #22c55e'
+
+                    statusText.innerText =
+                    'API STATUS : ONLINE'
+
+                    statusText.style.color =
+                    '#22c55e'
+                }
+
+
+                // ==========================================
+                // 📘 API ERROR
+                // ==========================================
+
+                else{
+
+                    statusDot.style.background =
+                    '#ef4444'
+
+                    statusDot.style.boxShadow =
+                    '0 0 5px #ef4444, 0 0 20px #ef4444'
+
+                    statusText.innerText =
+                    'API STATUS : ERROR'
+
+                    statusText.style.color =
+                    '#ef4444'
+                }
+
+            }, 1000)
 
         }
 
         // ==========================================
-        // 📘 API ERROR
+        // 📘 API OFFLINE
         // ==========================================
 
-        else{
+        catch(error){
 
             statusDot.style.background =
             '#ef4444'
 
             statusDot.style.boxShadow =
-            '0 0 5px #ef4444, 0 0 15px #ef4444'
+            '0 0 5px #ef4444, 0 0 20px #ef4444'
 
             statusText.innerText =
-            'API STATUS : ERROR'
+            'API STATUS : OFFLINE'
 
             statusText.style.color =
             '#ef4444'
         }
+    }
 
-    })
 
+    // Run function
 
-    // ==========================================
-    // 📘 API OFFLINE
-    // ==========================================
-
-    .catch(() => {
-
-        statusDot.style.background =
-        '#ef4444'
-
-        statusDot.style.boxShadow =
-        '0 0 5px #ef4444, 0 0 15px #ef4444'
-
-        statusText.innerText =
-        'API STATUS : OFFLINE'
-
-        statusText.style.color =
-        '#ef4444'
-    })
+    checkApiStatus()
 
 </script>
-
     </body>
 
     </html>
