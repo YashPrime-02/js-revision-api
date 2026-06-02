@@ -242,7 +242,7 @@ app.get("/", (req, res) => {
                 <span class="status-dot" id="statusDot"></span>
 
                 <span class="status-text" id="statusText">
-                    CHECKING API...
+                    API LIVE...
                 </span>
 
             </div>
