@@ -58,7 +58,7 @@ app.use('/api/topics', topicsRoutes);
 app.get('/', (req, res) => {
 
     res.send(`
-    
+
     <!DOCTYPE html>
     <html lang="en">
 
@@ -66,7 +66,8 @@ app.get('/', (req, res) => {
 
         <meta charset="UTF-8" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0" />
 
         <title>JS Revision API</title>
 
@@ -117,8 +118,71 @@ app.get('/', (req, res) => {
                 padding:8px 14px;
                 border-radius:999px;
                 font-size:14px;
-                margin-bottom:30px;
+                margin-bottom:20px;
                 color:#38bdf8;
+            }
+
+            /* ==========================================
+               API STATUS
+            ========================================== */
+
+            .status-box{
+                display:flex;
+                align-items:center;
+                gap:12px;
+
+                width:fit-content;
+
+                padding:12px 18px;
+
+                border-radius:12px;
+
+                background:#0f172a;
+
+                border:1px solid #1e293b;
+
+                margin-bottom:30px;
+            }
+
+            .status-dot{
+                width:14px;
+                height:14px;
+
+                border-radius:50%;
+
+                background:#22c55e;
+
+                box-shadow:
+                    0 0 5px #22c55e,
+                    0 0 15px #22c55e;
+
+                animation:pulse 1.5s infinite;
+            }
+
+            .status-text{
+                font-size:14px;
+                font-weight:bold;
+                letter-spacing:1px;
+
+                color:#22c55e;
+            }
+
+            @keyframes pulse{
+
+                0%{
+                    transform:scale(1);
+                    opacity:1;
+                }
+
+                50%{
+                    transform:scale(1.3);
+                    opacity:0.7;
+                }
+
+                100%{
+                    transform:scale(1);
+                    opacity:1;
+                }
             }
 
             .section{
@@ -174,18 +238,38 @@ app.get('/', (req, res) => {
                 Version 1.0.0
             </span>
 
-            <h1>JS Revision API 🚀</h1>
+            <!-- ==========================================
+                 API STATUS
+            ========================================== -->
+
+            <div class="status-box">
+
+                <span class="status-dot" id="statusDot"></span>
+
+                <span class="status-text" id="statusText">
+                    CHECKING API...
+                </span>
+
+            </div>
+
+            <h1>
+                JS Revision API 🚀
+            </h1>
 
             <p>
                 Professional JavaScript learning API built with Node.js and Express.
-                Explore JavaScript topics, concepts, functions, scope, control flow and more.
+                Explore JavaScript topics, concepts, functions, scope,
+                control flow and more.
             </p>
 
             <div class="section">
 
-                <h2>Available Endpoints</h2>
+                <h2>
+                    Available Endpoints
+                </h2>
 
                 <div class="card">
+
                     <p>
                         <code>GET /api/topics</code>
                     </p>
@@ -193,9 +277,11 @@ app.get('/', (req, res) => {
                     <a href="/api/topics">
                         View All Topics
                     </a>
+
                 </div>
 
                 <div class="card">
+
                     <p>
                         <code>GET /api/topics/:topicId</code>
                     </p>
@@ -203,16 +289,19 @@ app.get('/', (req, res) => {
                     <a href="/api/topics/03_basics">
                         View Sample Topic
                     </a>
+
                 </div>
 
             </div>
 
             <div class="section">
 
-                <h2>Tech Stack</h2>
+                <h2>
+                    Tech Stack
+                </h2>
 
                 <p>
-                    Node.js • Express.js • Vercel • REST API
+                    Node.js • Express.js • REST API • Vercel
                 </p>
 
             </div>
@@ -223,14 +312,70 @@ app.get('/', (req, res) => {
 
         </div>
 
+
+        <!-- ==========================================
+             API HEALTH CHECK SCRIPT
+        ========================================== -->
+
+        <script>
+
+            const statusDot =
+            document.getElementById('statusDot')
+
+            const statusText =
+            document.getElementById('statusText')
+
+
+            // Check API Health
+
+            fetch('/api/topics')
+
+            .then((response) => {
+
+                if(response.ok){
+
+                    statusDot.style.background = '#22c55e'
+
+                    statusDot.style.boxShadow = \`
+                        0 0 5px #22c55e,
+                        0 0 15px #22c55e
+                    \`
+
+                    statusText.innerText =
+                    'API STATUS : ONLINE'
+
+                    statusText.style.color = '#22c55e'
+
+                } else {
+
+                    throw new Error()
+                }
+            })
+
+            .catch(() => {
+
+                statusDot.style.background = '#ef4444'
+
+                statusDot.style.boxShadow = \`
+                    0 0 5px #ef4444,
+                    0 0 15px #ef4444
+                \`
+
+                statusText.innerText =
+                'API STATUS : OFFLINE'
+
+                statusText.style.color = '#ef4444'
+            })
+
+        </script>
+
     </body>
 
     </html>
 
-    `);
+    `)
 
-});
-
+})
 
 // ==========================================
 // 404 ROUTE HANDLER
