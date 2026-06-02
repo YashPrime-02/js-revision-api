@@ -1,15 +1,14 @@
-require('dotenv').config();
+require("dotenv").config();
 
-const express = require('express');
-const helmet = require('helmet');
-const cors = require('cors');
-const morgan = require('morgan');
-const rateLimit = require('express-rate-limit');
+const express = require("express");
+const helmet = require("helmet");
+const cors = require("cors");
+const morgan = require("morgan");
+const rateLimit = require("express-rate-limit");
 
 const app = express();
 
-const topicsRoutes = require('./routes/topics.routes');
-
+const topicsRoutes = require("./routes/topics.routes");
 
 // ==========================================
 // MIDDLEWARES
@@ -25,39 +24,35 @@ app.use(cors());
 app.use(express.json());
 
 // HTTP Request Logger
-app.use(morgan('dev'));
-
+app.use(morgan("dev"));
 
 // ==========================================
 // RATE LIMITER
 // ==========================================
 
 const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 mins
-    max: 100,
-    message: {
-        success: false,
-        message: 'Too many requests, please try again later'
-    }
+  windowMs: 15 * 60 * 1000, // 15 mins
+  max: 100,
+  message: {
+    success: false,
+    message: "Too many requests, please try again later",
+  },
 });
 
 app.use(limiter);
-
 
 // ==========================================
 // ROUTES
 // ==========================================
 
-app.use('/api/topics', topicsRoutes);
-
+app.use("/api/topics", topicsRoutes);
 
 // ==========================================
 // HOME ROUTE
 // ==========================================
 
-app.get('/', (req, res) => {
-
-    res.send(`
+app.get("/", (req, res) => {
+  res.send(`
 
     <!DOCTYPE html>
     <html lang="en">
@@ -317,79 +312,107 @@ app.get('/', (req, res) => {
              API HEALTH CHECK SCRIPT
         ========================================== -->
 
-        <script>
+       <script>
 
-            const statusDot =
-            document.getElementById('statusDot')
+    // ==========================================
+    // 📘 Select Status Elements
+    // ==========================================
 
-            const statusText =
-            document.getElementById('statusText')
+    const statusDot =
+    document.getElementById('statusDot')
+
+    const statusText =
+    document.getElementById('statusText')
 
 
-            // Check API Health
+    // ==========================================
+    // 📘 Check API Health
+    // ==========================================
 
-            fetch('/api/topics')
+    fetch('/api/topics')
 
-            .then((response) => {
+    .then((response) => {
 
-                if(response.ok){
+        // ==========================================
+        // 📘 API ONLINE
+        // ==========================================
 
-                    statusDot.style.background = '#22c55e'
+        if(response.ok){
 
-                    statusDot.style.boxShadow = \`
-                        0 0 5px #22c55e,
-                        0 0 15px #22c55e
-                    \`
+            statusDot.style.background =
+            '#22c55e'
 
-                    statusText.innerText =
-                    'API STATUS : ONLINE'
+            statusDot.style.boxShadow =
+            '0 0 5px #22c55e, 0 0 15px #22c55e'
 
-                    statusText.style.color = '#22c55e'
+            statusText.innerText =
+            'API STATUS : ONLINE'
 
-                } else {
+            statusText.style.color =
+            '#22c55e'
 
-                    throw new Error()
-                }
-            })
+        }
 
-            .catch(() => {
+        // ==========================================
+        // 📘 API ERROR
+        // ==========================================
 
-                statusDot.style.background = '#ef4444'
+        else{
 
-                statusDot.style.boxShadow = \`
-                    0 0 5px #ef4444,
-                    0 0 15px #ef4444
-                \`
+            statusDot.style.background =
+            '#ef4444'
 
-                statusText.innerText =
-                'API STATUS : OFFLINE'
+            statusDot.style.boxShadow =
+            '0 0 5px #ef4444, 0 0 15px #ef4444'
 
-                statusText.style.color = '#ef4444'
-            })
+            statusText.innerText =
+            'API STATUS : ERROR'
 
-        </script>
+            statusText.style.color =
+            '#ef4444'
+        }
+
+    })
+
+
+    // ==========================================
+    // 📘 API OFFLINE
+    // ==========================================
+
+    .catch(() => {
+
+        statusDot.style.background =
+        '#ef4444'
+
+        statusDot.style.boxShadow =
+        '0 0 5px #ef4444, 0 0 15px #ef4444'
+
+        statusText.innerText =
+        'API STATUS : OFFLINE'
+
+        statusText.style.color =
+        '#ef4444'
+    })
+
+</script>
 
     </body>
 
     </html>
 
-    `)
-
-})
+    `);
+});
 
 // ==========================================
 // 404 ROUTE HANDLER
 // ==========================================
 
 app.use((req, res) => {
-
-    res.status(404).json({
-        success: false,
-        message: 'Route not found'
-    });
-
+  res.status(404).json({
+    success: false,
+    message: "Route not found",
+  });
 });
-
 
 // ==========================================
 // SERVER
@@ -398,5 +421,5 @@ app.use((req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
