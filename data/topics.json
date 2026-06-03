@@ -337,6 +337,21 @@
     "instanceof",
     "oop"
   ]
+},
+
+{
+  "id": "22_static",
+  "title": "Static Properties & Methods",
+  "description": "Understanding the static keyword in classes and how it differs from instance methods.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "20 min",
+  "totalSections": 2,
+  "tags": [
+    "static",
+    "classes",
+    "inheritance",
+    "static-methods"
+  ]
 }
 
 
