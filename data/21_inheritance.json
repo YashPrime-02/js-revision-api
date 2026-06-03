@@ -1,0 +1,27 @@
+{
+  "id": "21_inheritance",
+  "title": "Inheritance in JavaScript",
+  "description": "Understanding class inheritance using extends, super, and instanceof operator.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "20 min",
+  "totalSections": 2,
+  "tags": [
+    "inheritance",
+    "extends",
+    "super",
+    "instanceof",
+    "oop"
+  ],
+  "sections": [
+    {
+      "title": "CLASS INHERITANCE",
+      "sourceFile": "01_inheritance.js",
+      "rawCode": "// ==========================================\n// 📘 INHERITANCE IN JAVASCRIPT\n// ==========================================\n\n// Parent Class\nclass User {\n    constructor(username){\n        this.username = username\n    }\n\n    logMe(){\n        console.log(`USERNAME is ${this.username}`);\n    }\n}\n\n\n// Child Class\nclass Teacher extends User{\n    constructor(username, email, password){\n        super(username)   // Call parent constructor\n        this.email = email\n        this.password = password\n    }\n\n    addCourse(){\n        console.log(`A new course was added by ${this.username}`);\n    }\n}\n\n\n// ==========================================\n// 📘 Object Creation\n// ==========================================\n\nconst chai = new Teacher(\n    \"chai\",\n    \"chai@teacher.com\",\n    \"123\"\n)\n\nchai.logMe()           // Inherited method\n// Output: USERNAME is chai\n\nchai.addCourse()       // Child method"
+    },
+    {
+      "title": "INSTANCEOF & RELATIONSHIP",
+      "sourceFile": "02_instanceof.js",
+      "rawCode": "// ==========================================\n// 📘 Parent Class Object\n// ==========================================\n\nconst masalaChai = new User(\"masalaChai\")\nmasalaChai.logMe()\n\n\n// ==========================================\n// 📘 instanceof Operator\n// ==========================================\n\nconsole.log(chai instanceof Teacher);   // true\nconsole.log(chai instanceof User);      // true\nconsole.log(masalaChai instanceof Teacher); // false\n\n\n// ==========================================\n// 📘 Key Concepts\n// ==========================================\n\n// extends     => Used for inheritance\n// super()     => Calls parent constructor\n// Child class inherits:\n//   ✅ Properties\n//   ✅ Methods from parent\n// instanceof  => Checks inheritance relationship"
+    }
+  ]
+}

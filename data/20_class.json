@@ -1,0 +1,27 @@
+{
+  "id": "20_class",
+  "title": "Classes in JavaScript - Part 1",
+  "description": "Understanding ES6 Classes, Constructor, Methods, and how they work behind the scenes with Prototypes.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "25 min",
+  "totalSections": 2,
+  "tags": [
+    "classes",
+    "constructor",
+    "prototype",
+    "es6",
+    "oop"
+  ],
+  "sections": [
+    {
+      "title": "CLASSES & CONSTRUCTOR",
+      "sourceFile": "01_classes.js",
+      "rawCode": "// ==========================================\n// 📘 CLASSES IN JAVASCRIPT\n// ==========================================\n\nclass User {\n    constructor(username, email, password){\n        this.username = username;\n        this.email = email;\n        this.password = password;\n    }\n\n    encryptPassword(){\n        return `${this.password}abc`\n    }\n\n    changeUsername(){\n        return `${this.username.toUpperCase()}`\n    }\n}\n\n\n// ==========================================\n// 📘 Object Creation\n// ==========================================\n\nconst chai = new User(\n    \"chai\",\n    \"chai@gmail.com\",\n    \"123\"\n)\n\nconsole.log(chai.encryptPassword());\n// Output: 123abc\n\nconsole.log(chai.changeUsername());\n// Output: CHAI"
+    },
+    {
+      "title": "BEHIND THE SCENES (Prototype Way)",
+      "sourceFile": "02_classes_prototype.js",
+      "rawCode": "// ==========================================\n// 📘 Behind the Scenes - Using Prototype\n// ==========================================\n\nfunction User(username, email, password){\n    this.username = username;\n    this.email = email;\n    this.password = password;\n}\n\nUser.prototype.encryptPassword = function(){\n    return `${this.password}abc`\n}\n\nUser.prototype.changeUsername = function(){\n    return `${this.username.toUpperCase()}`\n}\n\nconst tea = new User(\n    \"tea\",\n    \"tea@gmail.com\",\n    \"123\"\n)\n\nconsole.log(tea.encryptPassword());\nconsole.log(tea.changeUsername());\n\n\n// ==========================================\n// 📘 Important Note\n// ==========================================\n\n// Classes are syntactic sugar over prototypes.\n// Methods defined inside class are stored in prototype."
+    }
+  ]
+}

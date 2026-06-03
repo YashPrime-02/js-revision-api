@@ -305,7 +305,40 @@
     "this-binding",
     "function-borrowing"
   ]
+},
+
+{
+  "id": "20_class",
+  "title": "Classes in JavaScript - Part 1",
+  "description": "Understanding ES6 Classes, Constructor, Methods, and how they work behind the scenes with Prototypes.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "25 min",
+  "totalSections": 2,
+  "tags": [
+    "classes",
+    "constructor",
+    "prototype",
+    "es6",
+    "oop"
+  ]
+},
+
+{
+  "id": "21_inheritance",
+  "title": "Inheritance in JavaScript",
+  "description": "Understanding class inheritance using extends, super, and instanceof operator.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "20 min",
+  "totalSections": 2,
+  "tags": [
+    "inheritance",
+    "extends",
+    "super",
+    "instanceof",
+    "oop"
+  ]
 }
+
 
 
 
