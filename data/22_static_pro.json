@@ -1,0 +1,26 @@
+{
+  "id": "22_static",
+  "title": "Static Properties & Methods",
+  "description": "Understanding the static keyword in classes and how it differs from instance methods.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "20 min",
+  "totalSections": 2,
+  "tags": [
+    "static",
+    "classes",
+    "inheritance",
+    "static-methods"
+  ],
+  "sections": [
+    {
+      "title": "STATIC METHODS IN CLASSES",
+      "sourceFile": "01_static.js",
+      "rawCode": "// ==========================================\n// 📘 STATIC PROPERTIES & METHODS\n// ==========================================\n\nclass User {\n    constructor(username){\n        this.username = username\n    }\n\n    logMe(){\n        console.log(`Username: ${this.username}`);\n    }\n\n    // Static Method\n    static createId(){\n        return `123`\n    }\n}\n\n\nconst hitesh = new User(\"hitesh\")\n\n// console.log(hitesh.createId()) // ❌ Error\n// Static methods cannot be called on instances\n\n\n// Correct way - Access using class name\nconsole.log(User.createId());\n// Output: 123"
+    },
+    {
+      "title": "STATIC METHODS & INHERITANCE",
+      "sourceFile": "02_static_inheritance.js",
+      "rawCode": "// ==========================================\n// 📘 Child Class\n// ==========================================\n\nclass Teacher extends User {\n    constructor(username, email){\n        super(username)\n        this.email = email\n    }\n}\n\nconst iphone = new Teacher(\"iphone\", \"i@phone.com\")\n\n// console.log(iphone.createId()) // ❌ Error\n// Static methods are NOT inherited by instances\n\n// Only accessible via class name\nconsole.log(User.createId());"
+    }
+  ]
+}
