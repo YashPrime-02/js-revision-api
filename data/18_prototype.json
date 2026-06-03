@@ -1,0 +1,32 @@
+{
+  "id": "18_prototype",
+  "title": "Prototype & Inheritance",
+  "description": "Deep understanding of Prototype, Prototypal Inheritance, and extending built-in objects.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "30 min",
+  "totalSections": 3,
+  "tags": [
+    "prototype",
+    "inheritance",
+    "prototypal-inheritance",
+    "object-prototype",
+    "__proto__"
+  ],
+  "sections": [
+    {
+      "title": "PROTOTYPE BASICS & CUSTOM METHODS",
+      "sourceFile": "01_prototype_basics.js",
+      "rawCode": "// ==========================================\n// 📘 Prototype Basics\n// ==========================================\n\nlet myHeros = [\"thor\", \"spiderman\"]\n\nlet heroPower = {\n    thor: \"hammer\",\n    spiderman: \"sling\",\n    getSpiderPower: function(){\n        console.log(`Spidy power is ${this.spiderman}`);\n    }\n}\n\n\n// ==========================================\n// 📘 Adding Method to Object Prototype\n// ==========================================\n\nObject.prototype.hitesh = function(){\n    console.log(`hitesh is present in all objects`);\n}\n\n\n// ==========================================\n// 📘 Adding Method to Array Prototype\n// ==========================================\n\nArray.prototype.heyHitesh = function(){\n    console.log(`Hitesh says hello`);\n}\n\n\n// heroPower.hitesh()\n// myHeros.hitesh()\n// myHeros.heyHitesh()\n// heroPower.heyHitesh() // ❌ Error"
+    },
+    {
+      "title": "PROTOTYPAL INHERITANCE",
+      "sourceFile": "02_inheritance.js",
+      "rawCode": "// ==========================================\n// 📘 Inheritance using __proto__\n// ==========================================\n\nconst User = {\n    name: \"chai\",\n    email: \"chai@google.com\"\n}\n\nconst Teacher = {\n    makeVideo: true\n}\n\nconst TeachingSupport = {\n    isAvailable: false\n}\n\nconst TASupport = {\n    makeAssignment: 'JS assignment',\n    fullTime: true,\n    __proto__: TeachingSupport\n}\n\n// Old way\nTeacher.__proto__ = User\n\n// Modern way\nObject.setPrototypeOf(TeachingSupport, Teacher)"
+    },
+    {
+      "title": "CUSTOM PROTOTYPE METHODS",
+      "sourceFile": "03_custom_prototype.js",
+      "rawCode": "// ==========================================\n// 📘 Custom Method on String Prototype\n// ==========================================\n\nlet anotherUsername = \"ChaiAurCode \"\n\nString.prototype.trueLength = function(){\n    console.log(`${this}`);\n    console.log(`True length is: ${this.trim().length}`);\n}\n\nanotherUsername.trueLength()\n\"hitesh\".trueLength()\n\"iceTea\".trueLength()"
+    }
+  ]
+}

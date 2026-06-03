@@ -256,5 +256,41 @@
     "asynchronous"
   ]
 
+},
+
+
+{
+  "id": "17_objects",
+  "title": "Objects & Constructor Functions",
+  "description": "Deep dive into JavaScript Objects, 'this' keyword, Constructor Functions, and Prototype.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "30 min",
+  "totalSections": 3,
+  "tags": [
+    "objects",
+    "constructor",
+    "new-keyword",
+    "prototype",
+    "this"
+  ]
+},
+
+{
+  "id": "18_prototype",
+  "title": "Prototype & Inheritance",
+  "description": "Deep understanding of Prototype, Prototypal Inheritance, and extending built-in objects.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "30 min",
+  "totalSections": 3,
+  "tags": [
+    "prototype",
+    "inheritance",
+    "prototypal-inheritance",
+    "object-prototype",
+    "__proto__"
+  ]
 }
+
+
+
 ]
