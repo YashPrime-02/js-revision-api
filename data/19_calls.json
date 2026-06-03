@@ -1,0 +1,22 @@
+{
+  "id": "19_calls",
+  "title": "call(), apply() & bind() in JavaScript",
+  "description": "Master explicit 'this' binding using call(), apply(), and bind() methods.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "20 min",
+  "totalSections": 1,
+  "tags": [
+    "call",
+    "apply",
+    "bind",
+    "this-binding",
+    "function-borrowing"
+  ],
+  "sections": [
+    {
+      "title": "call() METHOD & FUNCTION BORROWING",
+      "sourceFile": "01_call_method.js",
+      "rawCode": "// ==========================================\n// 📘 call() IN JAVASCRIPT\n// ==========================================\n\n// call() is used to explicitly set value of 'this'\n\n\n// ==========================================\n// 📘 Parent Function\n// ==========================================\n\nfunction SetUsername(username){\n    // Imagine complex DB calls here\n    this.username = username\n    console.log(\"called\");\n}\n\n\n// ==========================================\n// 📘 Child Function\n// ==========================================\n\nfunction createUser(username, email, password){\n    // Important: Using call() to set 'this'\n    SetUsername.call(this, username)\n\n    this.email = email\n    this.password = password\n}\n\n\n// ==========================================\n// 📘 Object Creation\n// ==========================================\n\nconst chai = new createUser(\n    \"chai\",\n    \"chai@fb.com\",\n    \"123\"\n)\n\nconsole.log(chai);\n\n\n// Output:\n// called\n// createUser { username: 'chai', email: 'chai@fb.com', password: '123' }\n\n\n// ==========================================\n// 📘 Why call(this) is Important?\n// ==========================================\n\n// Without call(this):\n// 'this' inside SetUsername would refer to global object\n// So username would not be set properly on the new object"
+    }
+  ]
+}

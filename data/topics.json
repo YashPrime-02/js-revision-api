@@ -289,6 +289,22 @@
     "object-prototype",
     "__proto__"
   ]
+},
+
+{
+  "id": "19_calls",
+  "title": "call(), apply() & bind() in JavaScript",
+  "description": "Master explicit 'this' binding using call(), apply(), and bind() methods.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "20 min",
+  "totalSections": 1,
+  "tags": [
+    "call",
+    "apply",
+    "bind",
+    "this-binding",
+    "function-borrowing"
+  ]
 }
 
 
