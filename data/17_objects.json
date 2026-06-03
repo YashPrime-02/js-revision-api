@@ -1,0 +1,32 @@
+{
+  "id": "17_objects",
+  "title": "Objects & Constructor Functions",
+  "description": "Deep dive into JavaScript Objects, 'this' keyword, Constructor Functions, and Prototype.",
+  "difficulty": "Intermediate",
+  "estimatedReadTime": "30 min",
+  "totalSections": 3,
+  "tags": [
+    "objects",
+    "constructor",
+    "new-keyword",
+    "prototype",
+    "this"
+  ],
+  "sections": [
+    {
+      "title": "OBJECTS & THIS KEYWORD",
+      "sourceFile": "01_objects.js",
+      "rawCode": "// ==========================================\n// 📘 OBJECTS & THIS KEYWORD\n// ==========================================\n\nconst user = {\n    username: \"Yash Mishra\",\n    loginCount: 8,\n    signedIn: true,\n\n    getUserDetails: function () {\n        console.log(this);\n        // this => current object\n    }\n}\n\n// console.log(user.username)\n// console.log(user.getUserDetails());\n\n// In browser: this => window object\n// console.log(this);"
+    },
+    {
+      "title": "CONSTRUCTOR FUNCTIONS & NEW KEYWORD",
+      "sourceFile": "02_constructor.js",
+      "rawCode": "// ==========================================\n// 📘 Constructor Function\n// ==========================================\n\nfunction User(username, loginCount, isLoggedIn) {\n    this.username = username;\n    this.loginCount = loginCount;\n    this.isLoggedIn = isLoggedIn;\n\n    this.greeting = function () {\n        console.log(`Welcome ${this.username}`);\n    }\n\n    // return this; // implicit\n}\n\nconst userOne = new User(\"hitesh\", 12, true);\nconst userTwo = new User(\"ChaiAurCode\", 11, false);\n\nconsole.log(userOne.constructor);\n// console.log(userTwo);"
+    },
+    {
+      "title": "PROTOTYPE & NEW KEYWORD BEHAVIOR",
+      "sourceFile": "03_prototype.js",
+      "rawCode": "// ==========================================\n// 📘 Functions are Objects\n// ==========================================\n\nfunction multipleBy5(num) {\n    return num * 5;\n}\n\nmultipleBy5.power = 2;\n\nconsole.log(multipleBy5(5));\nconsole.log(multipleBy5.power);\nconsole.log(multipleBy5.prototype);\n\n\n// ==========================================\n// 📘 Prototype Example\n// ==========================================\n\nfunction createUser(username, score) {\n    this.username = username;\n    this.score = score;\n}\n\ncreateUser.prototype.increment = function () {\n    this.score++;\n};\n\ncreateUser.prototype.printMe = function () {\n    console.log(`price is ${this.score}`);\n};\n\nconst chai = new createUser(\"chai\", 25);\nconst tea = new createUser(\"tea\", 250);\n\nchai.printMe();\n\n\n// ==========================================\n// 📘 Behind the Scenes of 'new' Keyword\n// ==========================================\n\n/*\n1. A new empty object is created\n2. Prototype is linked\n3. Constructor function is called with 'this' bound\n4. The newly created object is returned\n*/"
+    }
+  ]
+}
