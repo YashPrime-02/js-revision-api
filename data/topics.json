@@ -352,6 +352,22 @@
     "inheritance",
     "static-methods"
   ]
+},
+
+{
+  "id": "23_object_descriptors",
+  "title": "Object Property Descriptors",
+  "description": "Deep dive into Object.defineProperty, getOwnPropertyDescriptor, enumerable, writable, and configurable flags.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "25 min",
+  "totalSections": 2,
+  "tags": [
+    "descriptors",
+    "defineproperty",
+    "enumerable",
+    "writable",
+    "configurable"
+  ]
 }
 
 

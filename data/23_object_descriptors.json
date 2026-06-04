@@ -1,0 +1,27 @@
+{
+    "id": "23_object_descriptors",
+    "title": "Object Property Descriptors",
+    "description": "Deep dive into Object.defineProperty, getOwnPropertyDescriptor, enumerable, writable, and configurable flags.",
+    "difficulty": "Advanced",
+    "estimatedReadTime": "25 min",
+    "totalSections": 2,
+    "tags": [
+        "descriptors",
+        "defineproperty",
+        "enumerable",
+        "writable",
+        "configurable"
+    ],
+    "sections": [
+        {
+            "title": "PROPERTY DESCRIPTORS & Math.PI",
+            "sourceFile": "01_descriptors.js",
+            "rawCode": "// ==========================================\n// 📘 PROPERTY DESCRIPTORS\n// ==========================================\n\nconst descripter = Object.getOwnPropertyDescriptor(Math, \"PI\")\n\n// console.log(descripter)\n\n// Output:\n// {\n//   value: 3.141592653589793,\n//   writable: false,\n//   enumerable: false,\n//   configurable: false\n// }\n\n\n// Math.PI cannot be changed because writable = false\n// console.log(Math.PI)\n// Math.PI = 5\n// console.log(Math.PI) // Still 3.14159..."
+        },
+        {
+            "title": "CUSTOM OBJECT DESCRIPTORS",
+            "sourceFile": "02_custom_descriptors.js",
+            "rawCode": "// ==========================================\n// 📘 Custom Object\n// ==========================================\n\nconst chai = {\n    name: 'ginger chai',\n    price: 250,\n    isAvailable: true,\n\n    orderChai: function(){\n        console.log(\"chai nhi bni\");\n    }\n}\n\n\n// Get descriptor\nconsole.log(Object.getOwnPropertyDescriptor(chai, \"name\"))\n\n\n// ==========================================\n// 📘 Modify Descriptor\n// ==========================================\n\nObject.defineProperty(chai, 'name', {\n    // writable: false,\n    enumerable: true,\n})\n\nconsole.log(Object.getOwnPropertyDescriptor(chai, \"name\"))\n\n\n// ==========================================\n// 📘 Object.entries() with Filtering\n// ==========================================\n\nfor (let [key, value] of Object.entries(chai)) {\n    if (typeof value !== 'function') {\n        console.log(`${key} : ${value}`);\n    }\n}"
+        }
+    ]
+}
