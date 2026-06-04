@@ -1,0 +1,22 @@
+{
+  "id": "24_getter_setter",
+  "title": "Getters & Setters in JavaScript",
+  "description": "Control how properties are accessed and modified using get and set keywords.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "20 min",
+  "totalSections": 1,
+  "tags": [
+    "getters",
+    "setters",
+    "encapsulation",
+    "classes",
+    "accessors"
+  ],
+  "sections": [
+    {
+      "title": "GETTERS & SETTERS",
+      "sourceFile": "01_getter_setter.js",
+      "rawCode": "// ==========================================\n// 📘 GETTERS & SETTERS\n// ==========================================\n\nclass User {\n    constructor(email, password){\n        this.email = email\n        this.password = password\n    }\n\n    // Getter for email\n    get email(){\n        return this._email.toUpperCase()\n    }\n\n    // Setter for email\n    set email(value){\n        this._email = value\n    }\n\n    // Getter for password\n    get password(){\n        return `${this._password}hitesh`\n    }\n\n    // Setter for password\n    set password(value){\n        this._password = value\n    }\n}\n\n\n// ==========================================\n// 📘 Object Creation\n// ==========================================\n\nconst hitesh = new User(\n    \"h@hitesh.ai\",\n    \"abc\"\n)\n\nconsole.log(hitesh.email)\n// Output: H@HITESH.AI\n\n// console.log(hitesh.password)\n// Output: abchitesh"
+    }
+  ]
+}

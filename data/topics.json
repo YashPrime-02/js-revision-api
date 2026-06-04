@@ -368,6 +368,22 @@
     "writable",
     "configurable"
   ]
+},
+
+{
+  "id": "24_getter_setter",
+  "title": "Getters & Setters in JavaScript",
+  "description": "Control how properties are accessed and modified using get and set keywords.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "20 min",
+  "totalSections": 1,
+  "tags": [
+    "getters",
+    "setters",
+    "encapsulation",
+    "classes",
+    "accessors"
+  ]
 }
 
 
