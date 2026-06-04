@@ -2,6 +2,7 @@
 
 
 js-revision-api/
+├
 ├── .gitattributes
 ├── .gitignore
 ├── controllers/
@@ -26,6 +27,10 @@ js-revision-api/
 │   ├── 17_objects.json
 │   ├── 18_prototype.json
 │   ├── 19_calls.json
+│   ├── 20_class.json
+│   ├── 21_inheritance.json
+│   ├── 22_static_pro.json
+│   ├── 23_object_descriptors.json
 │   └── topics.json
 ├
 ├── package-lock.json
@@ -35,3 +40,4 @@ js-revision-api/
 │   └── topics.routes.js
 ├── server.js
 └── vercel.json
+
