@@ -384,9 +384,20 @@
     "classes",
     "accessors"
   ]
+},
+
+{
+  "id": "25_closures",
+  "title": "Closures in JavaScript",
+  "description": "Deep understanding of Closures, Lexical Scoping, and practical use cases.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "25 min",
+  "totalSections": 3,
+  "tags": [
+    "closures",
+    "lexical-scope",
+    "function-scope",
+    "advanced-js"
+  ]
 }
-
-
-
-
 ]

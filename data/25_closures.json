@@ -1,0 +1,31 @@
+{
+  "id": "25_closures",
+  "title": "Closures in JavaScript",
+  "description": "Deep understanding of Closures, Lexical Scoping, and practical use cases.",
+  "difficulty": "Advanced",
+  "estimatedReadTime": "25 min",
+  "totalSections": 3,
+  "tags": [
+    "closures",
+    "lexical-scope",
+    "function-scope",
+    "advanced-js"
+  ],
+  "sections": [
+    {
+      "title": "CLOSURE BASICS & LEXICAL SCOPING",
+      "sourceFile": "01_closure_basics.js",
+      "rawCode": "// ==========================================\n// 📘 CLOSURES IN JAVASCRIPT\n// ==========================================\n\n// Closure = Function + its lexical scope\n\n\nfunction init() {\n    let name = \"Mozilla\";\n    function displayName() {\n        console.log(name);\n    }\n    displayName();\n}\n\n// init();\n\n\n// ==========================================\n// 📘 Lexical Scoping Example\n// ==========================================\n\nfunction outer(){\n    let username = \"hitesh\"\n\n    function inner(){\n        console.log(\"inner\", username);\n    }\n\n    function innerTwo(){\n        console.log(\"innerTwo\", username);\n        // console.log(secret); // ❌ Cannot access\n    }\n\n    inner()\n    innerTwo()\n}\n\n// outer();"
+    },
+    {
+      "title": "REAL-WORLD CLOSURE EXAMPLE",
+      "sourceFile": "02_real_closure.js",
+      "rawCode": "// ==========================================\n// 📘 Classic Closure Example\n// ==========================================\n\nfunction makeFunc(){\n    const name = \"Mozilla\";\n    function displayName(){\n        console.log(name);\n    }\n    return displayName;\n}\n\nconst myFunc = makeFunc()\n// myFunc()  // Still remembers 'name' variable\n\n\n// ==========================================\n// 📘 Practical Use Case - Click Handler\n// ==========================================\n\nfunction clickHandler(color){\n    return function(){\n        document.body.style.backgroundColor = color\n    }\n}\n\ndocument.getElementById('orange').onclick = clickHandler(\"orange\")\ndocument.getElementById('green').onclick = clickHandler(\"green\")"
+    },
+    {
+      "title": "CLOSURE INTERVIEW CONCEPTS",
+      "sourceFile": "03_closure_interview.js",
+      "rawCode": "// ==========================================\n// 📘 Interview Definition\n// ==========================================\n\n/*\nA Closure is a function that remembers the variables from its lexical scope even after the outer function has finished executing.\n\nKey Points:\n- Inner function remembers outer variables\n- Forms when function is returned\n- Used in: event handlers, data privacy, function currying, module pattern\n*/"
+    }
+  ]
+}
