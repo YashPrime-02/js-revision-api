@@ -1,6 +1,3 @@
-# js-revision-api
-
-
 js-revision-api/
 ├
 ├── .gitattributes
@@ -40,4 +37,3 @@ js-revision-api/
 │   └── topics.routes.js
 ├── server.js
 └── vercel.json
-
